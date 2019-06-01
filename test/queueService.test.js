@@ -21,5 +21,4 @@ describe("Test generateQueue", () => {
     expect(generateQueue()).toEqual([1]);
     expect(mockedRandomInt).toBeCalledTimes(2);
   });
-  it;
 });
