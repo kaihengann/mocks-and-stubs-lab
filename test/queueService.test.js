@@ -2,16 +2,15 @@ const { generateQueue } = require("../src/queueService");
 const math = require("mathjs");
 
 const spyRandomInt = jest.spyOn(math, "randomInt");
-beforeEach(() => {
-  jest.resetAllMocks();
-});
+
+beforeEach(() => jest.resetAllMocks());
 
 describe("Test generateQueue", () => {
-  it("should return [3, 3, 3] when randomInteger and number are both positive", () => {
+  it("should return array with positive numbers when randomInteger and number are both positive", () => {
     spyRandomInt.mockImplementation(() => 3);
     expect(generateQueue()).toEqual([3, 3, 3]);
   });
-  it("should return [-20, -20, -20] when randomInteger is positive and number is negative", () => {
+  it("should return array with negative numbers when randomInteger is positive and number is negative", () => {
     spyRandomInt.mockImplementation(() => -20);
     spyRandomInt.mockImplementationOnce(() => 3);
     expect(generateQueue()).toEqual([-20, -20, -20]);
