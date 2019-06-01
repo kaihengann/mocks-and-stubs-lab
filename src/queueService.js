@@ -10,6 +10,5 @@ const generateQueue = () => {
   return output;
 };
 
-module.exports = {
-  generateQueue
-}
+module.exports = generateQueue;
+
