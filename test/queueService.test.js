@@ -38,6 +38,7 @@ describe("Test generateQueue", () => {
     expect(generateQueue()).toEqual([-5, -5]);
   });
   it("should return mixed array when number is either positive or negative", () => {
+    // array.length = 3, number = 1, 14, 5
     spyRandomInt.mockImplementationOnce(() => 3);
     spyRandomInt.mockImplementationOnce(() => 1);
     spyRandomInt.mockImplementationOnce(() => -14);
