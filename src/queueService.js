@@ -6,7 +6,6 @@ const generateQueue = () => {
   const output = Array(randomInteger)
     .fill() // fills array with undefined
     .map(number => math.randomInt(-20, 50));
-
   return output;
 };
 
